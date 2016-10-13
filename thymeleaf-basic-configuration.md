@@ -28,29 +28,29 @@
     > &lt;\/dependency&gt;
 
 
-  2. gradle配置：
 
-  * thymeleaf3配置：
+1. gradle配置：
+
+2. thymeleaf3配置：
 
   > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
 
-  * thymeleaf-spring4配置：
+3. thymeleaf-spring4配置：
 
   > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
-2. Spring的配置
 
-3. Spring的xml配置
+1. Spring的配置
+
+2. Spring的xml配置
 
   * 配置viewResolver：
     > ```
     > <bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
     >  <property name="templateEngine" ref="templateEngine " /> 
-    > 
     >  <property name="characterEncoding" value="UTF-8" />; 
+    > </bean>
     > ```
-    > 
-    > &lt;\/bean&gt;
 
 
 
@@ -125,6 +125,4 @@
 >     }
 > } 
 > ```
-
-
 
