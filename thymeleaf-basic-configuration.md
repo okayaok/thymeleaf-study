@@ -195,9 +195,9 @@
 
 4.使用Thymeleaf Spring Data Dialect标签实行分页
 
-* 引入相关的jar包：thymeleaf-spring-data-dialect 
-  * maven方式引入jar包：
-    > ```
+引入相关的jar包：thymeleaf-spring-data-dialect 
+* maven方式引入jar包：
+  * > ```
     > <dependency> 
     >     &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt;
     >     &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt;
@@ -206,10 +206,10 @@
     > ```
 
 
-  * gradle方式引入jar包：
-    > compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
+
+* gradle方式引入jar包：
+  > compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
 
 
 * 添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine
-
 
