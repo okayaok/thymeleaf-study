@@ -42,14 +42,12 @@
 
 1.配置viewResolver：
 
-1. * > ```
-    > <bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
-    >  <property name="templateEngine" ref="templateEngine " /> 
-    >  <property name="characterEncoding" value="UTF-8" />; 
-    > </bean>
-    > ```
-
-
+```
+<bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
+ <property name="templateEngine" ref="templateEngine " /> 
+ <property name="characterEncoding" value="UTF-8" />; 
+</bean>
+```
 
 2.配置templateEngine：
 
