@@ -215,25 +215,18 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 * xml配置代码：
 
-&lt;bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngi ne"&gt;
-
+```
+<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">     
     &lt;property name="templateResolver" ref="templateRe solver" \/&gt;
-
     &lt;property name="additionalDialects"&gt;
-
         &lt;set&gt;
-
-             &lt;bean class="org.thymeleaf.dialect.spring data.SpringDataDialect"\/&gt;
-
+            &lt;bean class="org.thymeleaf.dialect.spring data.SpringDataDialect"\/&gt;
         &lt;\/set&gt; 
+    &lt;\/property&gt; 
+</bean> 
+```
 
-    &lt;\/property&gt;
+* java代码配置：
 
-&lt;\/bean&gt;
-
-java代码配置：
-
-\/\*\* \* 配置TemplateEngine \*\/ @Bean public TemplateEngine templateEngine\(\) { SpringTemplateEngine engine = new SpringTemplateEng ine\(\); engine.setEnableSpringELCompiler\(true\); engine.addDialect\(new SpringDataDialect\(\)\); engine.setTemplateResolver\(templateResolver\(\)\); return engine; }
-
-
+> \/\*\* \* 配置TemplateEngine \*\/ @Bean public TemplateEngine templateEngine\(\) { SpringTemplateEngine engine = new SpringTemplateEng ine\(\); engine.setEnableSpringELCompiler\(true\); engine.addDialect\(new SpringDataDialect\(\)\); engine.setTemplateResolver\(templateResolver\(\)\); return engine; }
 
