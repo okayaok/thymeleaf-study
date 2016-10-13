@@ -122,8 +122,6 @@
 
 ### Thymeleaf Layout Dialect标签配置
 
-
-
 1.引入相关的jar包:nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.0.3
 
 * maven引入jar包配置：
@@ -139,8 +137,6 @@
 * gradle引入jar包的配置：
 
 > compile group: 'nz.net.ultraq.thymeleaf', name: 'thym eleaf-layout-dialect', version: '2.0.3'
-
-
 
 2.在SpringTemplateEngine中配置layout标签的解析
 
@@ -174,8 +170,6 @@
   > ```
 
 
-
-
 3.在HTML界面关于layout标签的使用
 
 * 比如我创建了一个带有layout标签的主样式界面，引入layout标签的代 码如下所示：
@@ -199,7 +193,17 @@
   > &lt;section layout:fragment="content"&gt; &lt;子界面的内容&gt; &lt;\/section&gt;
 
 
+4.使用Thymeleaf Spring Data Dialect标签实行分页
+
+* 引入相关的jar包：thymeleaf-spring-data-dialect 
+  * maven方式引入jar包：
 
 
+ &lt;dependency&gt; &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt; &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt; &lt;version&gt;3.1.0&lt;\/version&gt; &lt;\/dependency&gt;
 
+gradle方式引入jar包：
+
+compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
+
+ii. 添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine
 
