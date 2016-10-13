@@ -15,15 +15,13 @@
 
 
 * thyeleaf-spring4配置：
-  > &lt;dependency&gt;
-  >     &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
-  >     &lt;artifactId&gt;thymeleaf-spring4&lt;\/artifactId&gt;
-  > 
-  > ```
-  > <version>3.0.0.RELEASE</version>
-  > ```
-  > 
-  > &lt;\/dependency&gt;
+  ```
+  <dependency> 
+      <groupId>org.thymeleaf</groupId>     
+      <artifactId>thymeleaf-spring4</artifactId> 
+      <version>3.0.0.RELEASE</version>
+  </dependency> 
+  ```
 
 
 2.gradle配置：
