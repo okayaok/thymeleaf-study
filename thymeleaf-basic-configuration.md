@@ -250,9 +250,11 @@ public TemplateEngine templateEngine() {
 
 * 引入分页信息，代码如下：
 
-> &lt;div class="row"&gt; &lt;div class="col-sm-6"&gt; &lt;div sd:pagination-summary=""&gt;info&lt;\/div&gt; &lt;\/div&gt; &lt;div class="col-sm-6"&gt; &lt;nav class="pull-right"&gt; &lt;ul class="pagination" sd:pagination="full"&gt; &lt;!-- Pagination created by SpringDataDialec t, this content is just for mockup --&gt; &lt;li class="disabled"&gt;&lt;a href="\#" aria-label ="Previous"&gt;&lt;span aria-hidden="true"&gt;«&lt;\/span&gt;&lt;\/ a&gt;&lt;\/li&gt; &lt;li class="active"&gt;&lt;a href="\#"&gt;1 &lt;span clas s="sr-only"&gt;\(current\)&lt;\/span&gt;&lt;\/a&gt;&lt;\/li&gt; &lt;\/ul&gt; &lt;\/nav&gt; &lt;\/div&gt; &lt;\/div&gt;
+> &lt;div class="row"&gt;
+> 
+>      &lt;div class="col-sm-6"&gt;
+> 
+>     &lt;div sd:pagination-summary=""&gt;info&lt;\/div&gt; &lt;\/div&gt; &lt;div class="col-sm-6"&gt; &lt;nav class="pull-right"&gt; &lt;ul class="pagination" sd:pagination="full"&gt; &lt;!-- Pagination created by SpringDataDialec t, this content is just for mockup --&gt; &lt;li class="disabled"&gt;&lt;a href="\#" aria-label ="Previous"&gt;&lt;span aria-hidden="true"&gt;«&lt;\/span&gt;&lt;\/ a&gt;&lt;\/li&gt; &lt;li class="active"&gt;&lt;a href="\#"&gt;1 &lt;span clas s="sr-only"&gt;\(current\)&lt;\/span&gt;&lt;\/a&gt;&lt;\/li&gt; &lt;\/ul&gt; &lt;\/nav&gt; &lt;\/div&gt; &lt;\/div&gt;
 
 **注意：当使用Thymeleaf Spring data dialect时，Page和Pageable必须使用 org.springframework.data.domain.Page和 org.springframework.data.domain.Pageable!**
-
-
 
