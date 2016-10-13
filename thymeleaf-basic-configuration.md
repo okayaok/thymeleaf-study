@@ -126,15 +126,15 @@
 
 * maven引入jar包配置：
 
-> &lt;dependency&gt;
-> 
->      &lt;groupId&gt;nz.net.ultraq.thymeleaf&lt;\/groupId&gt;
+> ```
+> <dependency>  
+>     <groupId&gt;nz.net.ultraq.thymeleaf&lt;\/groupId&gt;
 > 
 >     &lt;artifactId&gt;thymeleaf-layout-dialect&lt;\/artifactId&gt;
 > 
 >     &lt;version&gt;2.0.3&lt;\/version&gt;
-> 
-> &lt;\/dependency&gt;
+> </dependency> 
+> ```
 
 * gradle引入jar包的配置：
 
