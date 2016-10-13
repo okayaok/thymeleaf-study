@@ -197,9 +197,17 @@
 
 * 引入相关的jar包：thymeleaf-spring-data-dialect 
   * maven方式引入jar包：
+    > &lt;dependency&gt;
+    > 
+    >     &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt;
+    > 
+    >     &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt;
+    > 
+    >     &lt;version&gt;3.1.0&lt;\/version&gt;
+    > 
+    > &lt;\/dependency&gt;
 
 
- &lt;dependency&gt; &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt; &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt; &lt;version&gt;3.1.0&lt;\/version&gt; &lt;\/dependency&gt;
 
 gradle方式引入jar包：
 
