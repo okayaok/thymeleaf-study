@@ -188,7 +188,9 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
   > &lt;section layout:fragment="content"&gt; &lt;子界面的内容&gt; &lt;\/section&gt;
 
 
-4.使用Thymeleaf Spring Data Dialect标签实行分页
+### [Thymeleaf Spring Data Dialect](https://github.com/jpenren/thymeleaf-spring-data-dialect)标签实行分页
+
+1.引入相关的jar包：thymeleaf-spring-data-dialect
 
 * maven方式引入jar包：
 
@@ -206,7 +208,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
   > compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
 
 
-5.添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine中
+2.添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine中
 
 * xml配置代码：
 
