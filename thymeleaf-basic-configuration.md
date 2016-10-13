@@ -140,25 +140,18 @@
 
 > compile group: 'nz.net.ultraq.thymeleaf', name: 'thym eleaf-layout-dialect', version: '2.0.3'
 
-2.在SpringTemplateEngine中配置layout标签的解析 
+2.在SpringTemplateEngine中配置layout标签的解析
 
 * xml文件配置代码：
-  > &lt;bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngi ne"&gt; 
-  > 
-  > &lt;property name="templateResolver" ref="templateRe solver" \/&gt; 
-  > 
-  > &lt;property name="additionalDialects"&gt; 
-  > 
-  >     &lt;set&gt; 
-  > 
-  >         &lt;bean class="nz.net.ultraq.thymeleaf.Layo utDialect"\/&gt; 
-  > 
-  >     &lt;\/set&gt; 
-  > 
-  > &lt;\/property&gt; 
-  > 
-  > &lt;\/bean&gt;
-
-
+  > ```
+  > <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine"> 
+  >     <property name="templateResolver" ref="templateRe solver" /> 
+  >     <property name="additionalDialects"> 
+  >         <set> 
+  >             <bean class="nz.net.ultraq.thymeleaf.Layo utDialect"/> 
+  >         </set> 
+  >     </property>  
+  > </bean> 
+  > ```
 
 
