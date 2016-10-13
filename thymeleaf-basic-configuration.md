@@ -38,11 +38,11 @@
 
 ## Spring的配置
 
-## Spring的xml配置
+### Spring的xml配置
 
-1. 配置viewResolver：
+1.配置viewResolver：
 
-  * > ```
+1. * > ```
     > <bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
     >  <property name="templateEngine" ref="templateEngine " /> 
     >  <property name="characterEncoding" value="UTF-8" />; 
@@ -51,7 +51,7 @@
 
 
 
-配置templateEngine：
+2.配置templateEngine：
 
 > ```
 > <bean id="templateEngine" class="org.thymeleaf.sprin g4.SpringTemplateEngine"> 
@@ -60,7 +60,7 @@
 > </bean>
 > ```
 
-配置templateResolver:：
+3.配置templateResolver:：
 
 > &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
 > 
