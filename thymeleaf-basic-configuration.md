@@ -212,12 +212,12 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 ```
 <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">     
-    &lt;property name="templateResolver" ref="templateRe solver" \/&gt;
-    &lt;property name="additionalDialects"&gt;
-        &lt;set&gt;
-            &lt;bean class="org.thymeleaf.dialect.spring data.SpringDataDialect"\/&gt;
-        &lt;\/set&gt; 
-    &lt;\/property&gt; 
+   <property name="templateResolver" ref="templateRe solver" />    
+   <property name="additionalDialects">        
+      <set>            
+         <bean class="org.thymeleaf.dialect.spring data.SpringDataDialect" />        
+      </set>
+   </property>
 </bean> 
 ```
 
