@@ -60,13 +60,13 @@
 
 > &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
 > 
-> &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
+>     &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
 > 
-> &lt;property name="suffix" valeu="" \/&gt;
+>     &lt;property name="suffix" valeu="" \/&gt;
 > 
-> &lt;property name="templateMode" value="HTML" \/&gt;
+>     &lt;property name="templateMode" value="HTML" \/&gt;
 > 
-> &lt;property name="characterEncoding" value="UTF-8" \/&gt;
+>     &lt;property name="characterEncoding" value="UTF-8" \/&gt;
 > 
 > &lt;\/bean&gt;
 
