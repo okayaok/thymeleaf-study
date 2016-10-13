@@ -85,7 +85,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
     public void setApplicationContext(ApplicationContext appl icationContext) { 
         this.applicationContext = applicationContext; 
     }
-    
+
     /**
       * 配置ViewResolver 
       */ 
@@ -106,7 +106,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
         engine.setTemplateResolver(templateResolver()); 
         return engine; 
     }
-    
+
     /** 
     * 配置TemplateResolver 
     */ 
@@ -195,8 +195,6 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 4.使用Thymeleaf Spring Data Dialect标签实行分页
 
-引入相关的jar包：thymeleaf-spring-data-dialect
-
 * maven方式引入jar包：
 
   ```
@@ -209,8 +207,33 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 
 * gradle方式引入jar包：
+
   > compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
 
 
-* 添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine
+5.添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine中
+
+* xml配置代码：
+
+&lt;bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngi ne"&gt;
+
+    &lt;property name="templateResolver" ref="templateRe solver" \/&gt;
+
+    &lt;property name="additionalDialects"&gt;
+
+        &lt;set&gt;
+
+             &lt;bean class="org.thymeleaf.dialect.spring data.SpringDataDialect"\/&gt;
+
+        &lt;\/set&gt; 
+
+    &lt;\/property&gt;
+
+&lt;\/bean&gt;
+
+java代码配置：
+
+\/\*\* \* 配置TemplateEngine \*\/ @Bean public TemplateEngine templateEngine\(\) { SpringTemplateEngine engine = new SpringTemplateEng ine\(\); engine.setEnableSpringELCompiler\(true\); engine.addDialect\(new SpringDataDialect\(\)\); engine.setTemplateResolver\(templateResolver\(\)\); return engine; }
+
+
 
