@@ -156,10 +156,10 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
     */ 
   @Bean 
   public TemplateEngine templateEngine() { 
-      SpringTemplateEngine engine = new SpringTemplateEng ine\(\);
-      engine.setEnableSpringELCompiler\(true\);
-      engine.addDialect\(new LayoutDialect\(\)\);
-      engine.setTemplateResolver\(templateResolver\(\)\);
+      SpringTemplateEngine engine = new SpringTemplateEng ine();
+      engine.setEnableSpringELCompiler(true);
+      engine.addDialect(new LayoutDialect());
+      engine.setTemplateResolver(templateResolver());
       return engine;
   }
   ```
