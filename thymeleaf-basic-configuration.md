@@ -228,15 +228,17 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 * java代码配置：
 
-> \/\*\* 
-> 
-> \* 配置TemplateEngine 
-> 
-> \*\/ 
-> 
+> ```java
+> /**
+>   * 配置templateEngine
+>   */
 > @Bean 
-> 
-> public TemplateEngine templateEngine\(\) { 
-> 
->     SpringTemplateEngine engine = new SpringTemplateEng ine\(\); engine.setEnableSpringELCompiler\(true\); engine.addDialect\(new SpringDataDialect\(\)\); engine.setTemplateResolver\(templateResolver\(\)\); return engine; }
+> public TemplateEngine templateEngine() { 
+>     SpringTemplateEngine engine = new SpringTemplateEng ine(); 
+>     engine.setEnableSpringELCompiler(true); 
+>     engine.addDialect(new SpringDataDialect()); 
+>     engine.setTemplateResolver(templateResolver()); 
+>     return engine;
+> }
+> ```
 
