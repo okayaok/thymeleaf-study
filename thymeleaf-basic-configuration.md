@@ -120,3 +120,29 @@
 > } 
 > ```
 
+### Thymeleaf Layout Dialect标签配置
+
+1. 引入相关的jar包:nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.0.3 
+
+
+* maven引入jar包配置：
+
+> &lt;dependency&gt;
+> 
+> &lt;groupId&gt;nz.net.ultraq.thymeleaf&lt;\/groupId&gt;
+> 
+> &lt;artifactId&gt;thymeleaf-layout-dialect&lt;\/artifactId&gt;
+> 
+> &lt;version&gt;2.0.3&lt;\/version&gt;
+> 
+> &lt;\/dependency&gt;
+
+* gradle引入jar包的配置：
+
+> compile group: 'nz.net.ultraq.thymeleaf', name: 'thym eleaf-layout-dialect', version: '2.0.3'
+
+1. 在SpringTemplateEngine中配置layout标签的解析 xml文件配置代码：
+
+
+
+
