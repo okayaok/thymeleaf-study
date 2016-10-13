@@ -155,3 +155,15 @@
   > ```
 
 
+
+* java代码配置：
+
+  > \/\*\* \* 配置TemplateEngine \*\/ 
+  > 
+  > @Bean
+  > 
+  > public TemplateEngine templateEngine\(\) { SpringTemplateEngine engine = new SpringTemplateEng ine\(\); engine.setEnableSpringELCompiler\(true\); engine.addDialect\(new LayoutDialect\(\)\); engine.setTemplateResolver\(templateResolver\(\)\); return engine; }
+
+
+
+
