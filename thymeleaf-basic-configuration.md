@@ -28,16 +28,15 @@
     > &lt;\/dependency&gt;
 
 
+2. gradle配置：
 
-1. gradle配置：
+  * thymeleaf3配置：
+    > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
 
-2. thymeleaf3配置：
 
-  > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
+  * thymeleaf-spring4配置：
+    > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
-3. thymeleaf-spring4配置：
-
-  > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
 
 1. Spring的配置
