@@ -123,9 +123,9 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 ```
 <dependency>  
-    <groupId&gt;nz.net.ultraq.thymeleaf&lt;\/groupId&gt;
-    &lt;artifactId&gt;thymeleaf-layout-dialect&lt;\/artifactId&gt;
-    &lt;version&gt;2.0.3&lt;\/version&gt;
+    <groupId>nz.net.ultraq.thymeleaf</groupId>
+    <artifactId>thymeleaf-layout-dialect</artifactId>   
+    <version>2.0.3</version>
 </dependency> 
 ```
 
