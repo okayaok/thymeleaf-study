@@ -206,10 +206,10 @@
     > ```
 
 
+  * gradle方式引入jar包：
+    > compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
 
-gradle方式引入jar包：
 
-compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
+* 添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine
 
-ii. 添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine
 
