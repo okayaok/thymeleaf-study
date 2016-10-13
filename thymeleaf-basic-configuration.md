@@ -19,7 +19,9 @@
   >     &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
   >     &lt;artifactId&gt;thymeleaf-spring4&lt;\/artifactId&gt;
   > 
-  >     &lt;version&gt;3.0.0.RELEASE&lt;\/version&gt;
+  > ```
+  > <version>3.0.0.RELEASE</version>
+  > ```
   > 
   > &lt;\/dependency&gt;
 
