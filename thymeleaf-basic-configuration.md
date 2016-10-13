@@ -26,20 +26,19 @@
   > &lt;\/dependency&gt;
 
 
+2.gradle配置：
 
-  2.gradle配置：
+* thymeleaf3配置：
+  > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
 
-  thymeleaf3配置：
-  compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
 
-  thymeleaf-spring4配置：
+* thymeleaf-spring4配置：
+  > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
-  compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
-  ## Spring的配置
+## Spring的配置
 
-  ## Spring的xml配置
-
+## Spring的xml配置
 
 1. 配置viewResolver：
 
