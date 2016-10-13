@@ -5,15 +5,13 @@
 1.maven配置：
 
 * Thymeleaf3配置：
-  > &lt;dependency&gt;
-  > 
-  >     &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
-  > 
-  >     &lt;artifactId&gt;thymeleaf&lt;\/artifactId&gt;
-  > 
-  >     &lt;version&gt;3.0.0.RELEASE&lt;\/version&gt;
-  > 
-  > &lt;\/dependency&gt;
+  ```
+  <dependency> 
+  <groupId>org.thymeleaf</groupId>
+  <artifactId>thymeleaf</artifactId>
+  <version>3.0.0.RELEASE</version>
+  </dependency> 
+  ```
 
 
 * thyeleaf-spring4配置：
