@@ -29,22 +29,21 @@
 
 
 
-1. gradle配置：
+gradle配置：
 
-  * thymeleaf3配置：
-    > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
+1. thymeleaf3配置：
+  * > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
 
 
 
 * thymeleaf-spring4配置：
   > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
+  ### Spring的配置
 
-1. Spring的配置
+  ### Spring的xml配置
 
-2. Spring的xml配置
-
-  配置viewResolver：
+* 配置viewResolver：
 
   * > ```
     > <bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
@@ -54,25 +53,27 @@
     > ```
 
 
-  配置templateEngine：
-  > ```
-  > <bean id="templateEngine" class="org.thymeleaf.sprin g4.SpringTemplateEngine"> 
-  >     <property name="templateResolver" ref="templateRes olver" /> 
-  >     <property name="enableSpringELCompile" value="true " />
-  > </bean>
-  > ```
 
-  配置templateResolver:： 
-  > &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
-  > 
-  > &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
-  > 
-  > &lt;property name="suffix" valeu="" \/&gt; &lt;property name="templateMode" value="HTML" \/&gt;
-  > 
-  > &lt;property name="characterEncoding" value="UTF-8" \/&gt;
-  > 
-  > &lt;\/bean&gt;
+配置templateEngine：
 
+> ```
+> <bean id="templateEngine" class="org.thymeleaf.sprin g4.SpringTemplateEngine"> 
+>     <property name="templateResolver" ref="templateRes olver" /> 
+>     <property name="enableSpringELCompile" value="true " />
+> </bean>
+> ```
+
+配置templateResolver:：
+
+> &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
+> 
+> &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
+> 
+> &lt;property name="suffix" valeu="" \/&gt; &lt;property name="templateMode" value="HTML" \/&gt;
+> 
+> &lt;property name="characterEncoding" value="UTF-8" \/&gt;
+> 
+> &lt;\/bean&gt;
 
 1. Spring的java配置代码如下：
 
