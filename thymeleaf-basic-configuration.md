@@ -157,12 +157,6 @@
 
 * java代码配置：
 
-  > \/\*\* \* 配置TemplateEngine \*\/
-  > 
-  > @Bean
-  > 
-  > 
-  > 
   > ```java
   > /** 
   >   * 配置TemplateEngine 
