@@ -122,6 +122,8 @@
 
 ### Thymeleaf Layout Dialect标签配置
 
+
+
 1.引入相关的jar包:nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.0.3
 
 * maven引入jar包配置：
@@ -139,6 +141,8 @@
 * gradle引入jar包的配置：
 
 > compile group: 'nz.net.ultraq.thymeleaf', name: 'thym eleaf-layout-dialect', version: '2.0.3'
+
+
 
 2.在SpringTemplateEngine中配置layout标签的解析
 
@@ -170,5 +174,31 @@
   >     return engine;
   > }
   > ```
+
+
+
+
+3.在HTML界面关于layout标签的使用 
+
+* 比如我创建了一个带有layout标签的主样式界面，引入layout标签的代 码如下所示：
+  > xmlns:layout="http:\/\/www.ultraq.net.nz\/thymeleaf\/layout"
+
+
+* 使用layout标签的代码如下所示：
+  > &lt;div id="content"&gt;
+  > 
+  >     &lt;section layout:fragment="content"&gt;&lt;\/section&gt;
+  > 
+  > &lt;\/div&gt;
+
+  我在子界面引入该主界面的样式，同样需要在子界面引入layout标 签，并同时使用layout:decorate="主界面的路径"引入主界面。代码如 下：
+
+   &lt;html xmlns:layout="http:\/\/www.ultraq.net.nz\/thymele af\/layout" layout:decorate="admin\/layouts\/main.html"&gt;
+
+  将子界面的内容加到主样式界面的 中，代码如下：
+
+   &lt;section layout:fragment="content"&gt; &lt;子界面的内容&gt; &lt;\/section&gt;
+
+
 
 
