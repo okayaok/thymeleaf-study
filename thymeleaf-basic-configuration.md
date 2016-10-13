@@ -1,45 +1,46 @@
 ### Thymeleaf3+Spring4基本配置
 
 使用[Thymeleaf3+Spring4](http://www.thymeleaf.org/doc/articles/thymeleaf3migration.html)需要引入相应的jar包：thymeleaf:3.0.0和thymeleafspring4:3.0.0; 下面介绍两个常用的配置方法，maven和gradle。
+
 1. maven配置：
+  1. Thymeleaf3配置：
+    > &lt;dependency&gt;
+    > 
+    > &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
+    > 
+    > &lt;artifactId&gt;thymeleaf&lt;\/artifactId&gt;
+    > 
+    > &lt;version&gt;3.0.0.RELEASE&lt;\/version&gt;
+    > 
+    > &lt;\/dependency&gt;
 
-* Thymeleaf3配置：
-  > &lt;dependency&gt;
-  > 
-  > &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
-  > 
-  > &lt;artifactId&gt;thymeleaf&lt;\/artifactId&gt;
-  > 
-  > &lt;version&gt;3.0.0.RELEASE&lt;\/version&gt;
-  > 
+  2. thyeleaf-spring4配置：
+
+
+  &lt;dependency&gt;
+  &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
+  &lt;artifactId&gt;thymeleaf-spring4&lt;\/artifactId&gt;
+
+  &lt;version&gt;3.0.0.RELEASE&lt;\/version&gt;
+
   > &lt;\/dependency&gt;
 
-* thyeleaf-spring4配置：
-  > &lt;dependency&gt;
-  > &lt;groupId&gt;org.thymeleaf&lt;\/groupId&gt;
-  > &lt;artifactId&gt;thymeleaf-spring4&lt;\/artifactId&gt;
-  > 
-  > &lt;version&gt;3.0.0.RELEASE&lt;\/version&gt;
-  > 
-  > &lt;\/dependency&gt;
-
-  gradle配置：
 
 
-1. thymeleaf3配置：
-  * > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
+  1. gradle配置：
 
+  thymeleaf3配置：
+  compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
 
+  thymeleaf-spring4配置：
 
-* thymeleaf-spring4配置：
-
-  > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
+  compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
 
   ### Spring的配置
 
   ### Spring的xml配置
 
-* 配置viewResolver：
+2. 配置viewResolver：
 
   * > ```
     > <bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
