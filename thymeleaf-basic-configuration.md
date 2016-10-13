@@ -38,7 +38,7 @@
 
 ## Spring的配置
 
-Spring的xml配置
+### Spring的xml配置
 
 1.配置viewResolver：
 
@@ -62,17 +62,17 @@ Spring的xml配置
 
 > &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
 > 
->   &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
+> &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
 > 
->   &lt;property name="suffix" valeu="" \/&gt;
+> &lt;property name="suffix" valeu="" \/&gt;
 > 
->   &lt;property name="templateMode" value="HTML" \/&gt;
+> &lt;property name="templateMode" value="HTML" \/&gt;
 > 
->   &lt;property name="characterEncoding" value="UTF-8" \/&gt;
+> &lt;property name="characterEncoding" value="UTF-8" \/&gt;
 > 
 > &lt;\/bean&gt;
 
-1. Spring的java配置代码如下：
+### Spring的java配置：
 
 > ```
 > @Configuration
