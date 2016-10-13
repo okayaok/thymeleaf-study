@@ -228,17 +228,31 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 * java代码配置：
 
-> ```java
-> /**
->   * 配置templateEngine
->   */
-> @Bean 
-> public TemplateEngine templateEngine() { 
->     SpringTemplateEngine engine = new SpringTemplateEng ine(); 
->     engine.setEnableSpringELCompiler(true); 
->     engine.addDialect(new SpringDataDialect()); 
->     engine.setTemplateResolver(templateResolver()); 
->     return engine;
-> }
-> ```
+```java
+/**
+  * 配置templateEngine
+  */
+@Bean 
+public TemplateEngine templateEngine() { 
+    SpringTemplateEngine engine = new SpringTemplateEng ine(); 
+    engine.setEnableSpringELCompiler(true); 
+    engine.addDialect(new SpringDataDialect()); 
+    engine.setTemplateResolver(templateResolver()); 
+    return engine;
+}
+```
+
+6.页面引用 
+
+* 引入分页的sd标签，代码如下：
+
+> &lt;html xmlns:sd="http:\/\/www.thymeleaf.org\/spring-data" &gt;&lt;\/html&gt;
+
+* 引入分页信息，代码如下：
+
+> &lt;div class="row"&gt; &lt;div class="col-sm-6"&gt; &lt;div sd:pagination-summary=""&gt;info&lt;\/div&gt; &lt;\/div&gt; &lt;div class="col-sm-6"&gt; &lt;nav class="pull-right"&gt; &lt;ul class="pagination" sd:pagination="full"&gt; &lt;!-- Pagination created by SpringDataDialec t, this content is just for mockup --&gt; &lt;li class="disabled"&gt;&lt;a href="\#" aria-label ="Previous"&gt;&lt;span aria-hidden="true"&gt;&laquo;&lt;\/span&gt;&lt;\/ a&gt;&lt;\/li&gt; &lt;li class="active"&gt;&lt;a href="\#"&gt;1 &lt;span clas s="sr-only"&gt;\(current\)&lt;\/span&gt;&lt;\/a&gt;&lt;\/li&gt; &lt;\/ul&gt; &lt;\/nav&gt; &lt;\/div&gt; &lt;\/div&gt;
+
+
+
+
 
