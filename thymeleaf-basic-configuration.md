@@ -194,9 +194,9 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
   ```
   <dependency> 
-      &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt;
-      &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt;
-      &lt;version&gt;3.1.0&lt;\/version&gt; 
+      <groupId>io.github.jpenren</groupId>
+      <artifactId>thymeleaf-spring-data-dialect</artifactId>
+      <version>3.1.0</version> 
   </dependency> 
   ```
 
