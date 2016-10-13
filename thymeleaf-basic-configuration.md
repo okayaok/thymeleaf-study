@@ -74,51 +74,51 @@
 
 ### Spring的java配置：
 
-> ```java
-> @Configuration
-> @EnableWebMvc
-> @ComponentScan("com.thymeleafexamples")    
-> public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements ApplicationContextAware {
-> 
->     private ApplicationContext applicationContext;
-> 
->     public void setApplicationContext(ApplicationContext appl icationContext) { 
->         this.applicationContext = applicationContext; 
->     }
->     
->     /**
->       * 配置ViewResolver 
->       */ 
->     @Bean 
->     public ViewResolver viewResolver() { 
->         ThymeleafViewResolver resolver = new ThymeleafViewResol ver(); 
->         resolver.setTemplateEngine(templateEngine()); 
->         resolver.setCharacterEncoding("UTF-8"); return resolver; 
->     }
-> 
->     /** 
->     * 配置TemplateEngine 
->     */ 
->     @Bean 
->     public TemplateEngine templateEngine() { 
->         SpringTemplateEngine engine = new SpringTemplateEngine( ); 
->         engine.setEnableSpringELCompiler(true); 
->         engine.setTemplateResolver(templateResolver()); 
->         return engine; 
->     }
->     
->     /** 
->     * 配置TemplateResolver 
->     */ 
->     private ITemplateResolver templateResolver() { 
->         SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();      
->         resolver.setApplicationContext(applicationContext); resolver.setPrefix("/WEB-INF/templates/");          
->         resolver.setSuffix(""); 
->         resolver.setTemplateMode(TemplateMode.HTML); 
->         return resolver; 
->     }
-> } 
-> ```
+```java
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.thymeleafexamples")    
+public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements ApplicationContextAware {
+
+    private ApplicationContext applicationContext;
+
+    public void setApplicationContext(ApplicationContext appl icationContext) { 
+        this.applicationContext = applicationContext; 
+    }
+    
+    /**
+      * 配置ViewResolver 
+      */ 
+    @Bean 
+    public ViewResolver viewResolver() { 
+        ThymeleafViewResolver resolver = new ThymeleafViewResol ver(); 
+        resolver.setTemplateEngine(templateEngine()); 
+        resolver.setCharacterEncoding("UTF-8"); return resolver; 
+    }
+
+    /** 
+    * 配置TemplateEngine 
+    */ 
+    @Bean 
+    public TemplateEngine templateEngine() { 
+        SpringTemplateEngine engine = new SpringTemplateEngine( ); 
+        engine.setEnableSpringELCompiler(true); 
+        engine.setTemplateResolver(templateResolver()); 
+        return engine; 
+    }
+    
+    /** 
+    * 配置TemplateResolver 
+    */ 
+    private ITemplateResolver templateResolver() { 
+        SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();      
+        resolver.setApplicationContext(applicationContext); resolver.setPrefix("/WEB-INF/templates/");          
+        resolver.setSuffix(""); 
+        resolver.setTemplateMode(TemplateMode.HTML); 
+        return resolver; 
+    }
+} 
+```
 
 ### Thymeleaf Layout Dialect标签配置
 
@@ -126,13 +126,13 @@
 
 * maven引入jar包配置：
 
-> ```
-> <dependency>  
->     <groupId&gt;nz.net.ultraq.thymeleaf&lt;\/groupId&gt;
->     &lt;artifactId&gt;thymeleaf-layout-dialect&lt;\/artifactId&gt;
->     &lt;version&gt;2.0.3&lt;\/version&gt;
-> </dependency> 
-> ```
+```
+<dependency>  
+    <groupId&gt;nz.net.ultraq.thymeleaf&lt;\/groupId&gt;
+    &lt;artifactId&gt;thymeleaf-layout-dialect&lt;\/artifactId&gt;
+    &lt;version&gt;2.0.3&lt;\/version&gt;
+</dependency> 
+```
 
 * gradle引入jar包的配置：
 
@@ -141,33 +141,33 @@
 2.在SpringTemplateEngine中配置layout标签的解析
 
 * xml文件配置代码：
-  > ```
-  > <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine"> 
-  >     <property name="templateResolver" ref="templateRe solver" /> 
-  >     <property name="additionalDialects"> 
-  >         <set> 
-  >             <bean class="nz.net.ultraq.thymeleaf.Layo utDialect"/> 
-  >         </set> 
-  >     </property>  
-  > </bean> 
-  > ```
+  ```
+  <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine"> 
+      <property name="templateResolver" ref="templateRe solver" /> 
+      <property name="additionalDialects"> 
+          <set> 
+              <bean class="nz.net.ultraq.thymeleaf.Layo utDialect"/> 
+          </set> 
+      </property>  
+  </bean> 
+  ```
 
 
 * java代码配置：
 
-  > ```java
-  > /** 
-  >   * 配置TemplateEngine 
-  >   */ 
-  > @Bean 
-  > public TemplateEngine templateEngine() { 
-  >     SpringTemplateEngine engine = new SpringTemplateEng ine\(\);
-  >     engine.setEnableSpringELCompiler\(true\);
-  >     engine.addDialect\(new LayoutDialect\(\)\);
-  >     engine.setTemplateResolver\(templateResolver\(\)\);
-  >     return engine;
-  > }
-  > ```
+  ```java
+  /** 
+    * 配置TemplateEngine 
+    */ 
+  @Bean 
+  public TemplateEngine templateEngine() { 
+      SpringTemplateEngine engine = new SpringTemplateEng ine\(\);
+      engine.setEnableSpringELCompiler\(true\);
+      engine.addDialect\(new LayoutDialect\(\)\);
+      engine.setTemplateResolver\(templateResolver\(\)\);
+      return engine;
+  }
+  ```
 
 
 3.在HTML界面关于layout标签的使用
@@ -178,11 +178,11 @@
 
 * 使用layout标签的代码如下所示：
 
-  > ```
-  > <div id="content">
-  >     <section layout:fragment="content"></section>
-  > </div> 
-  > ```
+  ```
+  <div id="content">
+      <section layout:fragment="content"></section>
+  </div> 
+  ```
 
   我在子界面引入该主界面的样式，同样需要在子界面引入layout标 签，并同时使用layout:decorate="主界面的路径"引入主界面。代码如 下：
 
@@ -199,14 +199,13 @@
 
 * maven方式引入jar包：
 
-1. * > ```
-    > <dependency> 
-    >     &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt;
-    >     &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt;
-    >     &lt;version&gt;3.1.0&lt;\/version&gt; 
-    > </dependency> 
-    > ```
-
+  ```
+  <dependency> 
+      &lt;groupId&gt;io.github.jpenren&lt;\/groupId&gt;
+      &lt;artifactId&gt;thymeleaf-spring-data-dialect&lt;\/artifact Id&gt;
+      &lt;version&gt;3.1.0&lt;\/version&gt; 
+  </dependency> 
+  ```
 
 
 * gradle方式引入jar包：
