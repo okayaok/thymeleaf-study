@@ -161,17 +161,17 @@
   > 
   > @Bean
   > 
-  > public TemplateEngine templateEngine\(\) { 
+  > public TemplateEngine templateEngine\(\) {
   > 
-  > SpringTemplateEngine engine = new SpringTemplateEng ine\(\); 
+  >     SpringTemplateEngine engine = new SpringTemplateEng ine\(\);
   > 
-  > engine.setEnableSpringELCompiler\(true\); 
+  >     engine.setEnableSpringELCompiler\(true\);
   > 
-  > engine.addDialect\(new LayoutDialect\(\)\); 
+  >     engine.addDialect\(new LayoutDialect\(\)\);
   > 
-  > engine.setTemplateResolver\(templateResolver\(\)\); 
+  >     engine.setTemplateResolver\(templateResolver\(\)\);
   > 
-  > return engine; 
+  >     return engine;
   > 
   > }
 
