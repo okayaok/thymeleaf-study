@@ -38,7 +38,7 @@
 
 ## Spring的配置
 
-### Spring的xml配置
+Spring的xml配置
 
 1.配置viewResolver：
 
@@ -51,22 +51,24 @@
 
 2.配置templateEngine：
 
-> ```
-> <bean id="templateEngine" class="org.thymeleaf.sprin g4.SpringTemplateEngine"> 
->     <property name="templateResolver" ref="templateRes olver" /> 
->     <property name="enableSpringELCompile" value="true " />
-> </bean>
-> ```
+```
+<bean id="templateEngine" class="org.thymeleaf.sprin g4.SpringTemplateEngine"> 
+    <property name="templateResolver" ref="templateRes olver" /> 
+    <property name="enableSpringELCompile" value="true " />
+</bean>
+```
 
 3.配置templateResolver:：
 
-> &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
+> &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;   
 > 
-> &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
+>   &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
 > 
-> &lt;property name="suffix" valeu="" \/&gt; &lt;property name="templateMode" value="HTML" \/&gt;
+>   &lt;property name="suffix" valeu="" \/&gt; 
 > 
-> &lt;property name="characterEncoding" value="UTF-8" \/&gt;
+>   &lt;property name="templateMode" value="HTML" \/&gt;
+> 
+>   &lt;property name="characterEncoding" value="UTF-8" \/&gt;
 > 
 > &lt;\/bean&gt;
 
