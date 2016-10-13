@@ -115,7 +115,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 } 
 ```
 
-### Thymeleaf Layout Dialect标签配置
+### [Thymeleaf Layout Dialect](https://github.com/ultraq/thymeleaf-layout-dialect)标签配置
 
 1.引入相关的jar包:nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.0.3
 
