@@ -74,7 +74,7 @@
 
 ### Spring的java配置：
 
-> ```
+> ```java
 > @Configuration
 > @EnableWebMvc
 > @ComponentScan("com.thymeleafexamples")    
