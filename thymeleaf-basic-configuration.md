@@ -195,7 +195,8 @@
 
 4.使用Thymeleaf Spring Data Dialect标签实行分页
 
-引入相关的jar包：thymeleaf-spring-data-dialect 
+1. 引入相关的jar包：thymeleaf-spring-data-dialect
+
 * maven方式引入jar包：
   * > ```
     > <dependency> 
