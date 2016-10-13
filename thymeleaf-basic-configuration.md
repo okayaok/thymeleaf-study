@@ -60,11 +60,11 @@ Spring的xml配置
 
 3.配置templateResolver:：
 
-> &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;   
+> &lt;bean id="templateResolver" class="org.thymeleaf.sp ring4.templateresolver.SpringResourceTemplateResolver "&gt;
 > 
 >   &lt;property name="prefix" value="\/WEB-INF\/templates \/" \/&gt;
 > 
->   &lt;property name="suffix" valeu="" \/&gt; 
+>   &lt;property name="suffix" valeu="" \/&gt;
 > 
 >   &lt;property name="templateMode" value="HTML" \/&gt;
 > 
