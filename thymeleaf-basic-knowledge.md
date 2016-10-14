@@ -22,20 +22,21 @@ Thymeleaf在web界面引用是需加入引用链接：
 
   * 注意：@{\/users}是Context的相对路径，thymeleaf在渲染时会自动添加 当前web应用的context名称。若context名称为app，则路径为 \/app\/users。
 
-4. th:each标签：循环标签，用来列表数据进行循环取值。例如列表页对用户信息进行遍历取值： 
+4. th:each标签：循环标签，用来列表数据进行循环取值。例如列表页对用户信息进行遍历取值：
+
   > &lt;table&gt;
   > 
-  > &lt;tr&gt;
+  >     &lt;tr&gt;
   > 
-  > &lt;th&gt;username&lt;\/th&gt;
+  >     &lt;th&gt;username&lt;\/th&gt;
   > 
-  > &lt;\/tr&gt;
+  >     &lt;\/tr&gt;
   > 
-  > &lt;tr th:each="user,userIndex:${users}"&gt;
+  >     &lt;tr th:each="user,userIndex:${users}"&gt;
   > 
-  > &lt;td th:text="${user.name}"&gt;&lt;\/td&gt;
+  >     &lt;td th:text="${user.name}"&gt;&lt;\/td&gt;
   > 
-  > &lt;\/tr&gt;
+  >     &lt;\/tr&gt;
   > 
   > &lt;\/table&gt;
 
