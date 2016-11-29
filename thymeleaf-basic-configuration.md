@@ -27,11 +27,11 @@
 2.gradle配置：
 
 * thymeleaf3配置：
-  > compile group: 'org.thymeleaf', name: 'thymeleaf', ve rsion: '3.0.0.RELEASE'
+  > compile group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.0.RELEASE'
 
 
 * thymeleaf-spring4配置：
-  > compile group: 'org.thymeleaf', name: 'thymeleaf-spri ng4', version: '3.0.0.RELEASE'
+  > compile group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.0.RELEASE'
 
 
 ## Spring的配置
@@ -41,7 +41,7 @@
 1.配置viewResolver：
 
 ```
-<bean id="viewResolver" class="org.thymeleaf.spring4. view.ThymeleafViewResolver"> 
+<bean id="viewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver"> 
  <property name="templateEngine" ref="templateEngine " /> 
  <property name="characterEncoding" value="UTF-8" />; 
 </bean>
@@ -50,8 +50,8 @@
 2.配置templateEngine：
 
 ```
-<bean id="templateEngine" class="org.thymeleaf.sprin g4.SpringTemplateEngine"> 
-    <property name="templateResolver" ref="templateRes olver" /> 
+<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine"> 
+    <property name="templateResolver" ref="templateResolver" /> 
     <property name="enableSpringELCompile" value="true " />
 </bean>
 ```
@@ -73,7 +73,7 @@
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.thymeleafexamples")    
-public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements ApplicationContextAware {
+public class ThymeleafConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
@@ -86,7 +86,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
       */ 
     @Bean 
     public ViewResolver viewResolver() { 
-        ThymeleafViewResolver resolver = new ThymeleafViewResol ver(); 
+        ThymeleafViewResolver resolver = new ThymeleafViewResolver(); 
         resolver.setTemplateEngine(templateEngine()); 
         resolver.setCharacterEncoding("UTF-8"); return resolver; 
     }
@@ -105,7 +105,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
     /** 
     * 配置TemplateResolver 
     */ 
-    private ITemplateResolver templateResolver() { 
+    private TemplateResolver templateResolver() { 
         SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();      
         resolver.setApplicationContext(applicationContext); resolver.setPrefix("/WEB-INF/templates/");          
         resolver.setSuffix(""); 
@@ -131,17 +131,17 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 
 * gradle引入jar包的配置：
 
-> compile group: 'nz.net.ultraq.thymeleaf', name: 'thym eleaf-layout-dialect', version: '2.0.3'
+> compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.0.3'
 
 2.在SpringTemplateEngine中配置layout标签的解析
 
 * xml文件配置代码：
   ```
   <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine"> 
-      <property name="templateResolver" ref="templateRe solver" /> 
+      <property name="templateResolver" ref="templateResolver" /> 
       <property name="additionalDialects"> 
           <set> 
-              <bean class="nz.net.ultraq.thymeleaf.Layo utDialect"/> 
+              <bean class="nz.net.ultraq.thymeleaf.LayoutDialect"/> 
           </set> 
       </property>  
   </bean> 
@@ -156,7 +156,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
     */ 
   @Bean 
   public TemplateEngine templateEngine() { 
-      SpringTemplateEngine engine = new SpringTemplateEng ine();
+      SpringTemplateEngine engine = new SpringTemplateEngine();
       engine.setEnableSpringELCompiler(true);
       engine.addDialect(new LayoutDialect());
       engine.setTemplateResolver(templateResolver());
@@ -168,7 +168,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
 3.在HTML界面关于layout标签的使用
 
 * 比如我创建了一个带有layout标签的主样式界面，引入layout标签的代 码如下所示：
-  > xmlns:layout="http:\/\/www.ultraq.net.nz\/thymeleaf\/layout"
+  > xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 
 
 * 使用layout标签的代码如下所示：
@@ -179,13 +179,13 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
   </div> 
   ```
 
-  我在子界面引入该主界面的样式，同样需要在子界面引入layout标 签，并同时使用layout:decorate="主界面的路径"引入主界面。代码如 下：
+  我在子界面引入该主界面的样式，同样需要在子界面引入layout标 签，并同时使用layout:decorate="主界面的路径"引入主界面。代码如下：
 
-  > &lt;html xmlns:layout="http:\/\/www.ultraq.net.nz\/thymele af\/layout" layout:decorate="admin\/layouts\/main.html"&gt;
+  > <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="admin/layouts/main.html">
 
   将子界面的内容加到主样式界面的 中，代码如下：
 
-  > &lt;section layout:fragment="content"&gt; &lt;子界面的内容&gt; &lt;\/section&gt;
+  > <section layout:fragment="content"> <子界面的内容> </section>
 
 
 ### [Thymeleaf Spring Data Dialect](https://github.com/jpenren/thymeleaf-spring-data-dialect)标签实行分页
@@ -208,13 +208,13 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
   > compile group: 'io.github.jpenren', name: 'thymeleafspring-data-dialect', version: '3.1.0'
 
 
-2.添加Spring Data Dialect到已经配置好的Thymeleaf Template Engine中
+2.添加Spring Data Dialect到已经配置好的Thymeleaf TemplateEngine中
 
 * xml配置代码：
 
 ```
 <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">     
-   <property name="templateResolver" ref="templateRe solver" />    
+   <property name="templateResolver" ref="templateResolver" />    
    <property name="additionalDialects">        
       <set>            
          <bean class="org.thymeleaf.dialect.spring data.SpringDataDialect" />        
@@ -231,7 +231,7 @@ public class ThymeleafConfig extends WebMvcConfigurerAdap ter implements Applica
   */
 @Bean 
 public TemplateEngine templateEngine() { 
-    SpringTemplateEngine engine = new SpringTemplateEng ine(); 
+    SpringTemplateEngine engine = new SpringTemplateEngine(); 
     engine.setEnableSpringELCompiler(true); 
     engine.addDialect(new SpringDataDialect()); 
     engine.setTemplateResolver(templateResolver()); 
@@ -243,7 +243,7 @@ public TemplateEngine templateEngine() {
 
 * 引入分页的sd标签，代码如下：
 
-> &lt;html xmlns:sd="http:\/\/www.thymeleaf.org\/spring-data" &gt;&lt;\/html&gt;
+> &lt;html xmlns:sd="http://www.thymeleaf.org/spring-data" &gt;&lt;/html&gt;
 
 * 引入分页信息，代码如下：
 
