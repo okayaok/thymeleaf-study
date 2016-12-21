@@ -12,6 +12,19 @@ Thymeleaf在web界面引用是需加入引用链接：
 * ${...}：变量表达式，用户获取对象的值 
 * \*{...}：属性选择表达式，一般与th:with配合使用，用户简化表达式内容 
 * @{...}：链接表达式，由thymeleaf模板引擎负责解析应用的ContextPath
+* 算术运算
+* * 基本运算：+，-，\*，／，%（取余）
+
+* 布尔运算
+* * 基本运算：and，or
+  * 布尔否定运算：!，not
+
+* 条件运算
+  * 比较运算：&gt;，&lt;，&gt;=，&lt;=，==，!=（gt，lt，ge，le，eq，ne）
+  * if-then：（if）?（then）
+  * if-then-else：（if）？（then）：（else）
+  * Default：（value）?:（default value）
+
 
 ## 2.常用基本标签
 
@@ -60,6 +73,11 @@ Thymeleaf 提供了一系列Utility对象，可以通过“\#”直接访问。
 * \#dates:日期操作对象，常用方法${\#dates.format\(param1,"yyyy-MM-dd"\)}
 * \#lists:集合操作对象，常用方法${\#lists.isEmpty\(param1\)}、${\#lists.contains\(list, param1\)}、${\#lists.size\(param1\)}
 * \#numbers:数字操作对象，常用方法${\#number.formatDecimal\(num,3,2\)}
+
+## 
+
+
+## 
 
 
 
