@@ -36,7 +36,7 @@ Thymeleaf在web界面引用是需加入引用链接：
    > ```
 
 
-注意：当使用th:each="user,userIndex:${users}"时，若没有指定状态变量， thymeleaf会默认生成“循环变量名+Stat",即”userStat“.
+注意：当使用th:each="user,userIndex:${users}"时，若没有指定状态变量， thymeleaf会默认生成“循环变量名+Stat",即”userStat“。
 
 其中状态变量有以下属性：
 
@@ -47,9 +47,6 @@ Thymeleaf在web界面引用是需加入引用链接：
 * even\/odd:布尔值，当前循环是否是偶数\/奇数\(从0开始计算\) 
 * first:布尔值，当前循环是否是第一个 
 * last:布尔值，当前循环是否是最后一个
-
-
-
 
 5. th:if,th:unless判断标签：例如下列标签只有满足th:if中的条件是才会显示，&lt;p th:if="${user.name != null}" th:text="${ user.name }"&gt;&lt;\/p&gt;；th:unless正好相 反，当表达式的条件不成立时，才会显示其内容。
 
