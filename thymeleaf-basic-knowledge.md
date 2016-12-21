@@ -22,7 +22,11 @@ Thymeleaf在web界面引用是需加入引用链接：
 
    * 注意：@{\/users}是Context的相对路径，thymeleaf在渲染时会自动添加 当前web应用的context名称。若context名称为app，则路径为 \/app\/users。
 
-4. th:each标签：循环标签，用来列表数据进行循环取值。例如列表页对用户信息进行遍历取值：
+4. th:if,th:unless判断标签：例如下列标签只有满足th:if中的条件是才会显示，&lt;p th:if="${user.name != null}" th:text="${ user.name }"&gt;&lt;\/p&gt;；th:unless正好相 反，当表达式的条件不成立时，才会显示其内容。
+
+5. th:switch\/th:case标签：多项选择判断标签
+
+6. th:each标签：循环标签，用来列表数据进行循环取值。例如列表页对用户信息进行遍历取值：
 
    > ```
    > <table> 
@@ -47,15 +51,6 @@ Thymeleaf在web界面引用是需加入引用链接：
 * even\/odd:布尔值，当前循环是否是偶数\/奇数\(从0开始计算\) 
 * first:布尔值，当前循环是否是第一个 
 * last:布尔值，当前循环是否是最后一个
-
-
-
-
-
-
-5. th:if,th:unless判断标签：例如下列标签只有满足th:if中的条件是才会显示，&lt;p th:if="${user.name != null}" th:text="${ user.name }"&gt;&lt;\/p&gt;；th:unless正好相 反，当表达式的条件不成立时，才会显示其内容。
-
-6. th:switch\/th:case标签：多项选择判断标签
 
 ## 3.Thymeleaf Utilities对象
 
