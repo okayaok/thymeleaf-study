@@ -72,9 +72,16 @@ Thymeleaf在web界面引用是需加入引用链接：
 Thymeleaf 提供了一系列表达式对象，可以通过“\#”直接访问。
 
 * 基本表达式对象
+
+  * \#ctx：上下文对象
+
+  * \#vars：上下文变量
+
   * 
 
+
 * 内置表达式对象
+
   * \#strings:字符串操作对象，常用的方法有 ${\#strings.equals\(param1,param2\)}、${\#string.isEmpty\(param1\)}
   * \#dates:日期操作对象，常用方法${\#dates.format\(param1,"yyyy-MM-dd"\)}
   * \#lists:集合操作对象，常用方法${\#lists.isEmpty\(param1\)}、${\#lists.contains\(list, param1\)}、${\#lists.size\(param1\)}
