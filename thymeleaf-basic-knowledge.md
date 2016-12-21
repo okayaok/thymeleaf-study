@@ -16,10 +16,12 @@ Thymeleaf在web界面引用是需加入引用链接：
 * * 基本运算：+，-，\*，／，%（取余）
 
 * 布尔运算
+
 * * 基本运算：and，or
   * 布尔否定运算：!，not
 
 * 条件运算
+
   * 比较运算：&gt;，&lt;，&gt;=，&lt;=，==，!=（gt，lt，ge，le，eq，ne）
   * if-then：（if）?（then）
   * if-then-else：（if）？（then）：（else）
@@ -65,17 +67,21 @@ Thymeleaf在web界面引用是需加入引用链接：
 * first:布尔值，当前循环是否是第一个 
 * last:布尔值，当前循环是否是最后一个
 
-## 3.Thymeleaf Utilities对象
+## 3.Thymeleaf表达式对象
 
-Thymeleaf 提供了一系列Utility对象，可以通过“\#”直接访问。
+Thymeleaf 提供了一系列表达式对象，可以通过“\#”直接访问。
 
-* \#strings:字符串操作对象，常用的方法有 ${\#strings.equals\(param1,param2\)}、${\#string.isEmpty\(param1\)}
-* \#dates:日期操作对象，常用方法${\#dates.format\(param1,"yyyy-MM-dd"\)}
-* \#lists:集合操作对象，常用方法${\#lists.isEmpty\(param1\)}、${\#lists.contains\(list, param1\)}、${\#lists.size\(param1\)}
-* \#numbers:数字操作对象，常用方法${\#number.formatDecimal\(num,3,2\)}
+* 基本表达式对象
+  * 
+
+* 内置表达式对象
+  * \#strings:字符串操作对象，常用的方法有 ${\#strings.equals\(param1,param2\)}、${\#string.isEmpty\(param1\)}
+  * \#dates:日期操作对象，常用方法${\#dates.format\(param1,"yyyy-MM-dd"\)}
+  * \#lists:集合操作对象，常用方法${\#lists.isEmpty\(param1\)}、${\#lists.contains\(list, param1\)}、${\#lists.size\(param1\)}
+  * \#numbers:数字操作对象，常用方法${\#number.formatDecimal\(num,3,2\)}
+
 
 ## 
-
 
 ## 
 
